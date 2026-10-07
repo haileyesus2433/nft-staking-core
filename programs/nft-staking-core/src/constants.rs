@@ -1,10 +1,3 @@
-use anchor_lang::prelude::*;
-
-#[constant]
-pub const COUNTER_SEED: &[u8] = b"counter";
-
-#[constant]
-pub const HELLO_WORLD_LAMPORTS: u64 = 1;
-
-#[constant]
-pub const MAX_COUNT: u64 = 10;
+pub const CONFIG_SEED: &[u8] = b"config";
+pub const STAKE_SEED: &[u8] = b"stake";
+pub const TOTAL_STAKED_KEY: &str = "total_staked";

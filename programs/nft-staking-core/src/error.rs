@@ -1,9 +1,19 @@
 use anchor_lang::prelude::*;
 
 #[error_code]
-pub enum ErrorCode {
-    #[msg("Only the counter authority can update this counter")]
+pub enum StakingError {
+    #[msg("Unauthorized")]
     Unauthorized,
-    #[msg("Counter has reached the maximum value")]
-    CounterOverflow,
+    #[msg("Invalid collection provided")]
+    InvalidCollection,
+    #[msg("Asset is not frozen")]
+    AssetNotFrozen,
+    #[msg("Asset is still frozen")]
+    AssetStillFrozen,
+    #[msg("Failed to parse staking count")]
+    InvalidStakingCount,
+    #[msg("No rewards available to claim")]
+    NoRewardsAvailable,
+    #[msg("Numerical overflow")]
+    NumericalOverflow,
 }
